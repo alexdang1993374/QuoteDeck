@@ -1,0 +1,109 @@
+body {
+  text-align: center;
+	font-family: 'Kalam', cursive;
+	background: #FFFCF2;
+}
+
+h1 {
+  line-height: 1em;
+  color: #7D82B8;
+  /* cursor: pointer; */
+}
+
+h2 {
+  line-height: 1em;
+  font-size: 1em;
+}
+
+a {
+  color: black;
+}
+
+img {
+  width: 24%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.homeGif {
+  margin-top: 30px;
+  width: 60%;
+  height: 800px;
+  cursor: pointer;
+}
+
+.homeGif:hover {
+	opacity:0.8;
+
+}
+
+.homeGif:active {
+	opacity:0.5;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+.container:hover {
+  opacity: 0.8;
+}
+
+.container:active {
+  opacity: 0.5;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 5px;
+  color: white;
+  font-size: 2em;
+  font-weight: 600;
+  background: #a354bbaa;
+  z-index: 100;
+  user-select: none;
+}
+
+@media (max-width: 800px) {
+  img {
+    width: 48%;
+  }
+}
+
+.navbarDiv {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.navButton {
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+  background-color: #ededed;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  cursor: pointer;
+  color: #777777;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+  margin-left: 10px;
+}
+
+.navButton:hover {
+  background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+  background-color: #dfdfdf;
+}
+
+.navButton:active {
+  position: relative;
+  top: 1px;
+}

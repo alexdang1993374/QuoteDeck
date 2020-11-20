@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^0.21.0",
+    "purecss": "^2.0.3",
+    "react-router-dom": "^5.2.0",
+    "use-sound": "^1.0.2"
+  }
+}
