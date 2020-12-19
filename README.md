@@ -15,7 +15,7 @@ Go to talkybox.herokuapp.com to see Talkybox in action!
 
 Open localhost:5000 to open the app in the browser.
 <h1 id="tech_stack">Tech Stack</h1>
-Front-end: React
+Front-end: React <br>
 Back-end: Golang, PostgreSQL
 
 <h6>This was developed during my time as a student at <a href="https://github.com/codechrysalis">Code Chrysalis</a>.</h6>
