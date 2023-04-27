@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import useSound from "use-sound";
 import "./Simpsons.css";
-import axios from "axios";
 
 import zaus from "./img/zaus.jpg";
 
@@ -30,7 +29,6 @@ import carumba from "./img/carumba.jpg";
 import comb from "./sounds/comboSimp.wav";
 
 export default function Simpsons() {
-
   const [play, { stop }] = useSound(comb, {
     sprite: {
       zaus: [0, 3576],
@@ -48,14 +46,14 @@ export default function Simpsons() {
     },
   });
 
-  async function logPressed(id) {
-    const res = await axios.get(`/api/simpsonsquotes/${id}`);
-    const res2 = await axios.put(`/api/simpsonsquotes/${id}`, {
-      completed: (res.data.data.completed += 1),
-    });
-    console.log(`Pressed ${res.data.data.completed} times`);
-    return res2;
-  }
+  // async function logPressed(id) {
+  //   const res = await axios.get(`/api/simpsonsquotes/${id}`);
+  //   const res2 = await axios.put(`/api/simpsonsquotes/${id}`, {
+  //     completed: (res.data.data.completed += 1),
+  //   });
+
+  //   return res2;
+  // }
 
   return (
     <>
@@ -64,7 +62,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("8ac96b98-804c-4683-99f1-35342ac33ce2")
+            // logPressed("8ac96b98-804c-4683-99f1-35342ac33ce2");
             stop();
             play({ id: "zaus" });
           }}
@@ -75,7 +73,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("8444f1e6-056f-4620-8974-1699147a3a96")
+            // logPressed("8444f1e6-056f-4620-8974-1699147a3a96");
             stop();
             play({ id: "mole" });
           }}
@@ -86,7 +84,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("f056ec17-1288-4009-9694-bc16ebaf81f6")
+            // logPressed("f056ec17-1288-4009-9694-bc16ebaf81f6");
             stop();
             play({ id: "haha" });
           }}
@@ -97,7 +95,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("9260607c-e75d-45ec-92cd-299481d651b2")
+            // logPressed("9260607c-e75d-45ec-92cd-299481d651b2");
             stop();
             play({ id: "duff" });
           }}
@@ -108,7 +106,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("20130a69-ac6c-4865-870d-d6ee710f43b2")
+            // logPressed("20130a69-ac6c-4865-870d-d6ee710f43b2");
             stop();
             play({ id: "hippo" });
           }}
@@ -119,7 +117,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("b4321d8e-a2ef-4bb9-8180-dfce35f59fe6")
+            // logPressed("b4321d8e-a2ef-4bb9-8180-dfce35f59fe6");
             stop();
             play({ id: "dead" });
           }}
@@ -130,7 +128,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("599d50e2-321d-49f0-aa34-5dff46367f77")
+            // logPressed("599d50e2-321d-49f0-aa34-5dff46367f77");
             stop();
             play({ id: "flanders" });
           }}
@@ -141,7 +139,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("f6482b95-10f7-4855-8108-4f66ed4f7f7c")
+            // logPressed("f6482b95-10f7-4855-8108-4f66ed4f7f7c");
             stop();
             play({ id: "hell" });
           }}
@@ -152,7 +150,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("2b7a883c-2a25-4665-8b98-c351ce8455b7")
+            // logPressed("2b7a883c-2a25-4665-8b98-c351ce8455b7");
             stop();
             play({ id: "rake" });
           }}
@@ -163,7 +161,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("314caaca-f086-4b95-aeec-912cb4d800af")
+            // logPressed("314caaca-f086-4b95-aeec-912cb4d800af");
             stop();
             play({ id: "blurst" });
           }}
@@ -174,7 +172,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("f0327ba8-03c6-4bac-9256-314e9bca1fcc")
+            // logPressed("f0327ba8-03c6-4bac-9256-314e9bca1fcc");
             stop();
             play({ id: "damn" });
           }}
@@ -185,7 +183,7 @@ export default function Simpsons() {
         <span
           class="container"
           onClick={() => {
-            logPressed("b38b9f17-f76b-496d-9d28-0727995e76ef")
+            // logPressed("b38b9f17-f76b-496d-9d28-0727995e76ef");
             stop();
             play({ id: "carumba" });
           }}

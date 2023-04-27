@@ -1,7 +1,6 @@
 import React from "react";
 import useSound from "use-sound";
 import "./Spongebob.css";
-import axios from "axios";
 
 import firm from "./img/firm.jpg";
 
@@ -47,14 +46,14 @@ export default function Spongebob() {
     },
   });
 
-  async function logPressed(id) {
-    const res = await axios.get(`/api/spongequotes/${id}`);
-    const res2 = await axios.put(`/api/spongequotes/${id}`, {
-      completed: (res.data.data.completed += 1),
-    });
-    console.log(`Pressed ${res.data.data.completed} times`)
-    return res2;
-  }
+  // async function logPressed(id) {
+  //   const res = await axios.get(`/api/spongequotes/${id}`);
+  //   const res2 = await axios.put(`/api/spongequotes/${id}`, {
+  //     completed: (res.data.data.completed += 1),
+  //   });
+  //   console.log(`Pressed ${res.data.data.completed} times`)
+  //   return res2;
+  // }
 
   return (
     <>
@@ -63,7 +62,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("6bf3e554-f225-4055-b91a-9fea95b3787b")
+            // logPressed("6bf3e554-f225-4055-b91a-9fea95b3787b")
             stop();
             play({ id: "firm" });
           }}
@@ -74,7 +73,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("a22d0d6c-4131-4cd1-a96a-7393e7fbfcf3")
+            // logPressed("a22d0d6c-4131-4cd1-a96a-7393e7fbfcf3")
             stop();
             play({ id: "ready" });
           }}
@@ -85,7 +84,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("12a8f21b-0aa4-48c0-9949-c2e867c8dabf");
+            // logPressed("12a8f21b-0aa4-48c0-9949-c2e867c8dabf");
             stop();
             play({ id: "go" });
           }}
@@ -96,7 +95,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("b3630c21-d121-4f19-bcba-512155b18aa9")
+            // logPressed("b3630c21-d121-4f19-bcba-512155b18aa9")
             stop();
             play({ id: "chocolate" });
           }}
@@ -107,7 +106,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("fd5407f7-f7df-452c-8930-a2f380dbc5ee")
+            // logPressed("fd5407f7-f7df-452c-8930-a2f380dbc5ee")
             stop();
             play({ id: "wumbo" });
           }}
@@ -118,7 +117,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("ef201de5-bea3-44bd-b398-93e285ca05e2")
+            // logPressed("ef201de5-bea3-44bd-b398-93e285ca05e2")
             stop();
             play({ id: "number" });
           }}
@@ -129,7 +128,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("c50c07d0-ce57-4a45-9f7f-dab09ebb9001")
+            // logPressed("c50c07d0-ce57-4a45-9f7f-dab09ebb9001")
             stop();
             play({ id: "stinks" });
           }}
@@ -140,7 +139,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("8fde0fed-ceb2-4562-80a6-4874fa2aab22")
+            // logPressed("8fde0fed-ceb2-4562-80a6-4874fa2aab22")
             stop();
             play({ id: "people" });
           }}
@@ -151,7 +150,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("ae6a644a-855d-411c-a10a-82b60b30c7c2")
+            // logPressed("ae6a644a-855d-411c-a10a-82b60b30c7c2")
             stop();
             play({ id: "leg" });
           }}
@@ -162,7 +161,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("a5fedf1d-cca3-41ed-9337-537967e1b61e")
+            // logPressed("a5fedf1d-cca3-41ed-9337-537967e1b61e")
             stop();
             play({ id: "claws" });
           }}
@@ -173,7 +172,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("131aaa34-7aae-420a-8cf9-2865ca4cee70")
+            // logPressed("131aaa34-7aae-420a-8cf9-2865ca4cee70")
             stop();
             play({ id: "slasher" });
           }}
@@ -184,7 +183,7 @@ export default function Spongebob() {
         <span
           class="container"
           onClick={() => {
-            logPressed("fb294387-ea87-4f80-bfd7-cd5710c5beba")
+            // logPressed("fb294387-ea87-4f80-bfd7-cd5710c5beba")
             stop();
             play({ id: "future" });
           }}

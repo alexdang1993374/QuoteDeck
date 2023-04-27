@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import useSound from "use-sound";
-import axios from "axios";
 
 import bird from "./img/bird.gif";
 
@@ -72,18 +71,18 @@ export default function Sunny() {
     ];
     // let randomIndex = Math.floor(Math.random() * quotes.length);
     setRandomQuote(quotes[damn]);
-    damn++
-    if (damn > 8) damn = 0
+    damn++;
+    if (damn > 8) damn = 0;
   }
 
-  async function logPressed(id) {
-    const res = await axios.get(`/api/sunnyquotes/${id}`);
-    const res2 = await axios.put(`/api/sunnyquotes/${id}`, {
-      completed: (res.data.data.completed += 1),
-    });
-    console.log(`Pressed ${res.data.data.completed} times`)
-    return res2;
-  }
+  // async function logPressed(id) {
+  //   const res = await axios.get(`/api/sunnyquotes/${id}`);
+  //   const res2 = await axios.put(`/api/sunnyquotes/${id}`, {
+  //     completed: (res.data.data.completed += 1),
+  //   });
+  //   console.log(`Pressed ${res.data.data.completed} times`)
+  //   return res2;
+  // }
 
   return (
     <>
@@ -94,7 +93,7 @@ export default function Sunny() {
           onMouseEnter={playRandom}
           onClick={() => {
             playRandom();
-            logPressed("e448eec3-0b37-4af0-9276-41e9cad400a9")
+            // logPressed("e448eec3-0b37-4af0-9276-41e9cad400a9")
             stop();
             play({ id: randomQuote });
           }}
@@ -105,7 +104,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("f97df26b-2df2-44e7-a176-c4c8a6b49b45")
+            // logPressed("f97df26b-2df2-44e7-a176-c4c8a6b49b45")
             stop();
             play({ id: "bird" });
           }}
@@ -116,7 +115,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("1a50daab-1dc4-42dc-878f-4156ac643a64")
+            // logPressed("1a50daab-1dc4-42dc-878f-4156ac643a64")
             stop();
             play({ id: "bull" });
           }}
@@ -127,7 +126,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("4aeab079-3473-4c31-9cef-87bafa375e2d")
+            // logPressed("4aeab079-3473-4c31-9cef-87bafa375e2d")
             stop();
             play({ id: "dish" });
           }}
@@ -138,7 +137,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("98fa5f90-e2c8-4eb7-a3b9-89e516bf9c4e")
+            // logPressed("98fa5f90-e2c8-4eb7-a3b9-89e516bf9c4e")
             stop();
             play({ id: "fat" });
           }}
@@ -149,7 +148,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("f8d3d729-1a49-46ae-97a8-a2b72e661a84")
+            // logPressed("f8d3d729-1a49-46ae-97a8-a2b72e661a84")
             stop();
             play({ id: "gay" });
           }}
@@ -160,7 +159,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("0f1bbf71-80d1-4163-a7aa-d91b9e7ecd72")
+            // logPressed("0f1bbf71-80d1-4163-a7aa-d91b9e7ecd72")
             stop();
             play({ id: "gin" });
           }}
@@ -171,7 +170,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("593d35cd-b87f-459c-b5f6-f870a510bc7b")
+            // logPressed("593d35cd-b87f-459c-b5f6-f870a510bc7b")
             stop();
             play({ id: "mang" });
           }}
@@ -182,7 +181,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("4dfa8709-5342-4062-88d7-3934632e46d0")
+            // logPressed("4dfa8709-5342-4062-88d7-3934632e46d0")
             stop();
             play({ id: "milk" });
           }}
@@ -193,7 +192,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("a37ee43d-543e-455b-8c55-9e1593c5215e")
+            // logPressed("a37ee43d-543e-455b-8c55-9e1593c5215e")
             stop();
             play({ id: "rum" });
           }}
@@ -204,7 +203,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("8f423b6a-1565-497e-8e11-6e1f0b1a18c5")
+            // logPressed("8f423b6a-1565-497e-8e11-6e1f0b1a18c5")
             stop();
             play({ id: "trash" });
           }}
@@ -215,7 +214,7 @@ export default function Sunny() {
         <span
           class="container"
           onClick={() => {
-            logPressed("4c335114-d3a1-46f1-8ad0-d3ad7d7a9228")
+            // logPressed("4c335114-d3a1-46f1-8ad0-d3ad7d7a9228")
             stop();
             play({ id: "wild" });
           }}
