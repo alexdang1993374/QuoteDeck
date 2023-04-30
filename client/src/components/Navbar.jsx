@@ -1,26 +1,45 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
-export default function NavBar({setHome}) {
+const pages = [
+  { title: "Spongebob", id: "Spongebob" },
+  { title: "The Simpsons", id: "Simpsons" },
+  { title: "It's Always Sunny in Philadelphia", id: "Sunny" },
+];
+
+export default function NavBar({ setHome }) {
   return (
     <>
-      <div className="navbarDiv">
-        <div className="navButtonDiv">
-          <NavLink to="/Spongebob">
-            <button className="navButton" onClick={() => setHome(false)}>Spongebob</button>
-          </NavLink>
+      <nav className="navbarDiv">
+        <div className="navContainer">
+          <div>
+            <NavLink style={{ display: "flex", alignItems: "center" }} to="/">
+              <p
+                style={{
+                  color: "white",
+                  fontSize: "18px",
+                  cursor: "pointer",
+                  fontWeight: "bold",
+                }}
+              >
+                QuoteDeck
+              </p>
+            </NavLink>
+          </div>
+
+          <ul className="navList">
+            {pages.map((page) => (
+              <li
+                key={page.title}
+                className="navButton"
+                onClick={() => setHome(false)}
+              >
+                <NavLink to={page.id}>{page.title}</NavLink>
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="navButtonDiv">
-          <NavLink to="/Simpsons">
-            <button className="navButton" onClick={() => setHome(false)}>The Simpsons</button>
-          </NavLink>
-        </div>
-        <div className="navButtonDiv">
-          <NavLink to="/Sunny">
-            <button className="navButton" onClick={() => setHome(false)}>It's Always Sunny in Philadelphia</button>
-          </NavLink>
-        </div>
-      </div>
+      </nav>
     </>
   );
 }

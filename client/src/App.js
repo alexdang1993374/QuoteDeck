@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <h1>Welcome to TalkyBox! Choose a soundboard!</h1>
+      {/* <h1>Welcome to QuoteDeck! Choose a soundboard!</h1> */}
       <BrowserRouter>
         <div className="navbarDiv">
           <Navbar setHome={setHome} />
@@ -45,6 +45,5 @@ function App() {
 }
 
 export default App;
-
 
 // poop
