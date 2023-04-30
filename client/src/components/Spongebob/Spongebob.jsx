@@ -34,6 +34,7 @@ const Spongebob = () => {
           style={{
             backgroundImage: `url(${card.image})`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="Text">

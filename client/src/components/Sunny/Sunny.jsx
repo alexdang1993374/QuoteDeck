@@ -6,7 +6,7 @@ import { god } from "./img";
 
 let damn = 0;
 const Sunny = () => {
-  const [randomQuote, setRandomQuote] = useState("");
+  const [damnQuote, setDamnQuote] = useState("");
 
   const [play, { stop }] = useSound(comb, {
     sprite: {
@@ -33,7 +33,7 @@ const Sunny = () => {
     },
   });
 
-  function playRandom() {
+  function playNext() {
     let quotes = [
       "god1",
       "god2",
@@ -45,8 +45,7 @@ const Sunny = () => {
       "god8",
       "god9",
     ];
-    // let randomIndex = Math.floor(Math.random() * quotes.length);
-    setRandomQuote(quotes[damn]);
+    setDamnQuote(quotes[damn]);
     damn++;
     if (damn > 8) damn = 0;
   }
@@ -56,14 +55,14 @@ const Sunny = () => {
       <div
         className="Card"
         onClick={() => {
-          playRandom();
-          // logPressed("e448eec3-0b37-4af0-9276-41e9cad400a9")
+          playNext();
           stop();
-          play({ id: randomQuote });
+          play({ id: damnQuote });
         }}
         style={{
           backgroundImage: `url(${god})`,
           backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         <div className="Text">
@@ -82,6 +81,7 @@ const Sunny = () => {
           style={{
             backgroundImage: `url(${card.image})`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="Text">

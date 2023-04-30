@@ -33,6 +33,7 @@ const Simpsons = () => {
           style={{
             backgroundImage: `url(${card.image})`,
             backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
           <div className="Text">

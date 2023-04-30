@@ -6,16 +6,19 @@ import doIt from "../../do.gif";
 const Home = () => {
   const [play, { stop }] = useSound(doItS);
   return (
-    <div style={{ display: "grid", placeItems: "center", height: "100vh" }}>
-      <img
-        style={{ width: "500px", height: "500px", cursor: "pointer" }}
-        src={doIt}
-        alt="doIt"
+    <div className="Container">
+      <div
+        className="Home-Card"
         onClick={() => {
           stop();
           play();
         }}
-      />
+        style={{
+          backgroundImage: `url(${doIt})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      ></div>
     </div>
   );
 };
