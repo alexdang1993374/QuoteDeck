@@ -36,7 +36,11 @@ const Spongebob = () => {
             backgroundImage: `url(${card.image})`,
             backgroundSize: "cover",
           }}
-        ></div>
+        >
+          <div className="Text">
+            <p>{card.title}</p>
+          </div>
+        </div>
       ))}
     </div>
   );
