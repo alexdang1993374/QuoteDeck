@@ -29,128 +29,55 @@ a {
   color: white;
 }
 
-img {
-  width: 24%;
+.Container {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.Card {
+  width: 300px;
   height: 200px;
-  object-fit: cover;
+  overflow: hidden;
   border-radius: 10px;
-}
-
-.homeGif {
-  margin-top: 30px;
-  width: 60%;
-  height: 800px;
   cursor: pointer;
-}
-
-.homeGif:hover {
-  opacity: 0.8;
-}
-
-.homeGif:active {
-  opacity: 0.5;
-}
-
-.container {
   position: relative;
-  text-align: center;
-  color: white;
-  cursor: pointer;
 }
 
-.container:hover {
-  opacity: 0.8;
-}
-
-.container:active {
-  opacity: 0.5;
-}
-
-.text-overlay {
+.Text {
   position: absolute;
-  bottom: 12px;
-  left: 5px;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  border-radius: 10px;
+
+  background: rgba(75, 121, 161, 0.9); /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(40, 62, 81, 0.9),
+    rgba(75, 121, 161, 0.9)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(40, 62, 81, 0.9),
+    rgba(75, 121, 161, 0.9)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.Card:hover {
+  opacity: 0.8;
+}
+
+.Card:active {
+  opacity: 0.5;
+}
+
+p {
   color: white;
-  font-size: 2em;
-  font-weight: 600;
-  background: #a354bbaa;
-  z-index: 100;
-  user-select: none;
-}
-
-@media (max-width: 800px) {
-  img {
-    width: 48%;
-  }
-}
-
-.navbarDiv {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-  /* margin-top: 10px; */
-  position: fixed;
-  top: 0;
-}
-
-@media (min-width: 640px) {
-  .navbarDiv {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-}
-
-.navContainer {
-  /* Set the width to 100% */
-  width: 100%;
-  /* Set the display to flex */
-  display: flex;
-  /* Distribute space between flex items */
-  justify-content: space-between;
-  /* Center align flex items vertically */
-  align-items: center;
-  /* Set the maximum width to 80rem (1280px) */
-  max-width: 80rem;
-  /* Set the left and right margins to auto for centering */
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.navList {
-  /* Remove default list styles */
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  /* Hide the element */
-  display: none;
-}
-
-@media (min-width: 640px) {
-  .navList {
-    /* Set the display to flex */
-    display: flex;
-    /* Set the flex direction to row */
-    flex-direction: row;
-    /* Set the gap between flex items */
-    gap: 2.5rem;
-  }
-}
-
-.navButton {
-  cursor: pointer;
   font-weight: bold;
-  font-size: 18px;
-  color: white;
-}
-
-.navButton:hover {
-  background: linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
-  background-color: #dfdfdf;
-}
-
-.navButton:active {
-  position: relative;
-  top: 1px;
 }

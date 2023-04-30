@@ -1,5 +1,4 @@
 import React from "react";
-import "./Spongebob.css";
 import { spongebobCards } from "./spongebobCards";
 import useSound from "use-sound";
 import comb from "./sounds/comb2.wav";
