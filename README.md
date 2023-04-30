@@ -1,6 +1,6 @@
 🎬 QuoteDeck: Unleash the Power of Iconic TV Quotes!
 
-<img  src="./talkybox.JPG" alt="demo">
+<img  src="./quotedeck.png" alt="demo">
 
 <h1 id="intro">🚀 Elevate Your Quote Game</h1>
 QuoteDeck is an incredible full-stack web application that brings back the nostalgia of timeless quotes from your favorite television series. Get your daily dose of inspiration from Spongebob, The Simpsons, It's Always Sunny in Philadelphia, and many more to come!
