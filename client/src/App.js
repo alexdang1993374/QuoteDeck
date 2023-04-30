@@ -8,38 +8,24 @@ import Navbar from "./components/Navbar.jsx";
 import doIt from "./do.gif";
 import useSound from "use-sound";
 import doItS from "./do.wav";
+import Home from "./components/home/Home";
+import ActiveProvider, { useActive } from "./context";
 
 function App() {
-  const [home, setHome] = useState(true);
-  const [play, { stop }] = useSound(doItS);
-
   return (
     <>
-      {/* <h1>Welcome to QuoteDeck! Choose a soundboard!</h1> */}
       <BrowserRouter>
-        <div className="navbarDiv">
-          <Navbar setHome={setHome} />
-        </div>
-        <div>
+        <ActiveProvider>
+          <Navbar />
+
           <Switch>
-            <Route path="/Spongebob" render={() => <Spongebob />} />
-            <Route path="/Simpsons" render={() => <Simpsons />} />
-            <Route path="/Sunny" render={() => <Sunny />} />
+            <Route exact path="/" component={Home} />
+            <Route path="/spongebob" component={Spongebob} />
+            <Route path="/simpsons" component={Simpsons} />
+            <Route path="/sunny" component={Sunny} />
           </Switch>
-        </div>
+        </ActiveProvider>
       </BrowserRouter>
-      {home ? (
-        <img
-          className="homeGif"
-          src={doIt}
-          onClick={() => {
-            stop();
-            play();
-          }}
-        />
-      ) : (
-        <> </>
-      )}
     </>
   );
 }
