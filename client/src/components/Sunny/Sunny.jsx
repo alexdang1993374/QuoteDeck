@@ -4,9 +4,21 @@ import comb from "./sounds/combSunny.wav";
 import useSound from "use-sound";
 import { god } from "./img";
 
-let damn = 0;
+let damn = 1;
+
 const Sunny = () => {
-  const [damnQuote, setDamnQuote] = useState("");
+  const [damnQuote, setDamnQuote] = useState("god1");
+  const quotes = [
+    "god1",
+    "god2",
+    "god3",
+    "god4",
+    "god5",
+    "god6",
+    "god7",
+    "god8",
+    "god9",
+  ];
 
   const [play, { stop }] = useSound(comb, {
     sprite: {
@@ -33,32 +45,19 @@ const Sunny = () => {
     },
   });
 
-  function playNext() {
-    let quotes = [
-      "god1",
-      "god2",
-      "god3",
-      "god4",
-      "god5",
-      "god6",
-      "god7",
-      "god8",
-      "god9",
-    ];
+  const playDammit = () => {
+    stop();
+    play({ id: damnQuote });
     setDamnQuote(quotes[damn]);
     damn++;
     if (damn > 8) damn = 0;
-  }
+  };
 
   return (
     <div className="Container">
       <div
         className="Card"
-        onClick={() => {
-          playNext();
-          stop();
-          play({ id: damnQuote });
-        }}
+        onClick={playDammit}
         style={{
           backgroundImage: `url(${god})`,
           backgroundSize: "cover",
